@@ -1,6 +1,6 @@
 // components/AboutAndSkills.js
 
-import { SimpleGrid, VStack, Circle, Link, HStack, Box, Flex, Grid, Heading, Text } from '@chakra-ui/react';
+import { Image, SimpleGrid, VStack, Circle, Link, HStack, Box, Flex, Grid, Heading, Text } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const ExperiencePreview = ({ title, description, href }) => (
@@ -8,24 +8,30 @@ const ExperiencePreview = ({ title, description, href }) => (
         <Heading size="md">{title}</Heading>
         <Text>{description}</Text>
         <Link href={href} color="blue.500" fontWeight="bold">
-            Read More
+            Mer om dette
         </Link>
     </VStack>
 );
 
 
+
 const experiences = [
     {
-        title: 'Experience 1',
-        description: 'A brief description of Experience 1.',
-        href: 'https://example.com/experience-1',
+        title: 'Prosjektleder BRAIN Hackathon',
+        description: 'Som leder av prosjektteamet organiserte jeg et vellykket Hackathon som brakte sammen over 45 talentfulle studenter for en spennende 24-timers case',
+        href: 'https://nornir.io/ntnu-hackathon-brain-and-nornir/',
     },
     {
-        title: 'Experience 2',
-        description: 'A brief description of Experience 2.',
-        href: 'https://example.com/experience-2',
+        title: 'Webutvikler i REVJU',
+        description: "Høsten 2022 var jeg webutvikler i oppstartsselskapet Revju.no, hvor jeg var del av et team på fire personer som jobbet med å utvikle deres nettside",
+        href: 'https://www.revju.no/',
     },
-    // Add more experiences as needed
+    {
+        title: 'Webutvikler i Muttu',
+        description: 'I vår har jeg jobbet på et prosjekt sammen med resten av Muttu med å utvikle deres plattform,  hovedfokus på frontend og design',
+        href: 'https://www.muttu.no/v%C3%A5rt-oppdrag',
+    },
+
 ];
 
 const ProjectCard = ({ title, description, href }) => (
@@ -41,7 +47,7 @@ const ProjectCard = ({ title, description, href }) => (
         <Heading size="md">{title}</Heading>
         <Text>{description}</Text>
         <Link href={href} color="blue.500" fontWeight="bold">
-            View Project
+            Se prosjektet
         </Link>
     </VStack>
 );
@@ -49,111 +55,98 @@ const ProjectCard = ({ title, description, href }) => (
 
 const projects = [
     {
-        title: 'Project 1',
-        description: 'A brief description of Project 1.',
-        href: 'https://example.com/project-1',
+        title: 'Sure Protocol (Startup)',
+        description: "Med på å bygge en protokoll for forsikring på blockchainen Solana",
+        href: 'https://sure.claims/',
     },
     {
-        title: 'Project 2',
-        description: 'A brief description of Project 2.',
-        href: 'https://example.com/project-2',
+        title: 'Data Dashboard ',
+        description: 'En enkel applikasjon som lar deg raskt bygge dashboards for ditt spesifikke behov ved hjeøp av Python og Plotly',
+        href: 'https://github.com/AdamSioud/Start-NTNU-Hackathon-2022',
     },
-    // Add more projects as needed
+    {
+        title: 'Trondheim Kart',
+        description: 'Som en del av et gruppeprosjekt ved NTNU, ga Trondheim kommune meg og en gruppe studenter i oppdrag å lage en prototype som kan finne det beste stedet å bo i Trondheim basert på visse kriterier',
+        href: 'https://github.com/AdamSioud/Trondheim-Kommune-Prosjekt-Frontend',
+    },
+    {
+        title: 'MINTA IOS APP',
+        description: 'Lag NFT-er raskt ved hjelp av mobilen din',
+        href: 'https://github.com/AdamSioud/MINTA',
+    },
 ];
 
 const AboutAndSkills = () => {
+
+    const skills = [
+        'UX Designer',
+        'Writing',
+        'Programming',
+        'Marketing',
+        // Add more skills here
+    ];
+
     return (
-        <Box as="section" py={8}>
-            <Flex justifyContent="center">
-                <Grid templateColumns={{ base: '1fr', md: '1fr 1fr' }} gap={8} maxW="80%">
+        <Box as="section" py={8} px={{ base: 4, md: 8 }} maxW="90%" mx="auto" bg="gray.100">
+            <VStack spacing={8} alignItems="flex-start">
+                <Box>
+                    <Circle size="150px" bg="gray.200">
+                        <Image
+                            src="https://media.licdn.com/dms/image/D4D03AQGm3jYZz_WRrQ/profile-displayphoto-shrink_200_200/0/1679491532531?e=1685577600&v=beta&t=-eZCFMA0OzmHrG4AHvX0ZVuIc5M1QLeLNSiTDPHHX6U"
+                            alt="Adam Sioud"
+                            boxSize="150px"
+                            objectFit="cover"
+                        />
+                    </Circle>
+                </Box>
+                <Box textAlign="center">
+                    <Heading as="h1" fontSize="4xl" mb={2}>
+                        Adam Sioud
+                    </Heading>
+                    <HStack spacing={4}>
+                        <Link href="https://github.com/AdamSioud" isExternal>
+                            <FaGithub size="24px" />
+                        </Link>
+                        <Link href="https://www.linkedin.com/in/adam-sioud-316b48191/" isExternal>
+                            <FaLinkedin size="24px" />
+                        </Link>
+                        {/* Add more social icons here */}
+                    </HStack>
+                </Box>
+                <Box w="50%">
+                    <Heading as="h2" fontSize="2xl" mb={4}>
+                        Om meg
+                    </Heading>
+                    <Text fontSize="lg">
+                        Jeg er en 3 års Datateknologi-student ved NTNU som liker å spille tennis så mye som mulig og lage skulpturer når jeg får tid.                    </Text>
+                </Box>
+                <Grid templateColumns={{ base: '1fr', md: '1fr 1fr' }} gap={8} w="80%">
                     <Box>
-                        <HStack spacing={4}>
-                            <Circle size="100px" bg="gray.200">
-                                <img
-                                    src="..\media\profile.png"
-                                    alt="Adam Sioud"
-                                    boxSize="100px"
-                                    objectFit="cover"
-                                >
-                                </img>
-                            </Circle>
-                            <Box>
-                                <Heading as="h1" fontSize="4xl">
-                                    Adam Sioud
-                                </Heading>
-                                <HStack mt={2}>
-                                    <Link href="https://github.com/your-username" isExternal>
-                                        <FaGithub size="24px" />
-                                    </Link>
-                                    <Link href="https://linkedin.com/in/your-profile" isExternal>
-                                        <FaLinkedin size="24px" />
-                                    </Link>
-                                    {/* Add more social icons here */}
-                                </HStack>
-                            </Box>
-                        </HStack>
                         <Heading as="h2" fontSize="2xl" mb={4}>
-                            About Me
+                            Erfaringer
                         </Heading>
-                        <Text fontSize="lg" mb={8}>
-                            I'm a software developer with experience in web development, mobile app development, and more. I'm passionate about creating clean, efficient, and user-friendly applications. In my free time, I enjoy learning new technologies and working on side projects.
-                        </Text>
-                        <Box bg="F7F2DD" w={{ base: '100%', sm: '100%', md: '100%' }}>
-                            <Text fontSize="2xl" fontWeight="bold" mb={4}>My Skills</Text>
-                            <Flex flexWrap="wrap">
-                                <Box mr={4} mb={4} bg="green.200" borderRadius="md" p={2}>
-                                    <Text fontWeight="bold" fontSize="md">UX Designer</Text>
-                                </Box>
-                                <Box mr={4} mb={4} bg="gray.200" borderRadius="md" p={2}>
-                                    <Text fontWeight="bold" fontSize="md">Writing</Text>
-                                </Box>
-                                <Box mr={4} mb={4} bg="green.200" borderRadius="md" p={2}>
-                                    <Text fontWeight="bold" fontSize="md">Programming</Text>
-                                </Box>
-                                <Box mr={4} mb={4} bg="gray.200" borderRadius="md" p={2}>
-                                    <Text fontWeight="bold" fontSize="md">Marketing</Text>
-                                </Box>
-                                {/* Add more skills here */}
-                            </Flex>
-
-                        </Box>
-
-                        <Box as="section" >
-
-                            <Flex justifyContent="center" alignItems="stretch">
-
-
-                                <Heading as="h2" fontSize="2xl" mb={4}>
-                                    My Experience
-                                </Heading>
-                                {experiences.map((experience, index) => (
-                                    <ExperiencePreview key={index} {...experience} />
-                                ))}
-
-                            </Flex>
-                        </Box>
-
-                        <Box as="section" py={8}>
-
-
-                            <Flex justifyContent="center" alignItems="stretch">
-                                <Heading as="h2" fontSize="2xl" mb={4}>
-                                    My Projects
-                                </Heading>
-                                <SimpleGrid columns={[1, 1, 2]} spacing={8}>
-                                    {projects.map((project, index) => (
-                                        <ProjectCard key={index} {...project} />
-                                    ))}
-                                </SimpleGrid>
-
-                            </Flex>
-                        </Box>
+                        <VStack spacing={4} alignItems="flex-start">
+                            {experiences.map((experience, index) => (
+                                <ExperiencePreview key={index} {...experience} />
+                            ))}
+                        </VStack>
                     </Box>
-
+                    <Box>
+                        <Heading as="h2" fontSize="2xl" mb={4}>
+                            Prosjekter
+                        </Heading>
+                        <SimpleGrid columns={[1, 1, 2]} spacing={8}>
+                            {projects.map((project, index) => (
+                                <ProjectCard key={index} {...project} />
+                            ))}
+                        </SimpleGrid>
+                    </Box>
                 </Grid>
-            </Flex>
-        </Box >
+            </VStack>
+        </Box>
     );
+
 };
+
 
 export default AboutAndSkills;
