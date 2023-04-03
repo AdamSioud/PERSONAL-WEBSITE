@@ -11,21 +11,21 @@ const About = () => {
     return (
 
         <>
-            <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" spacing={8} mb={4}>
-                <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" spacing={4}>
+            <Box spacing={8} mb={4} gap={3}>
+                <Box display="flex" flexDirection="column" justifyContent="center" spacing={5} mb={4}>
                     <Heading as="h1" fontSize="4xl" mb={2}>
                         Adam Sioud
                     </Heading>
-                    <Circle size="150px" bg="gray.200">
+                    <Circle size="190px" bg="gray.200">
                         <Image
                             src="https://media.licdn.com/dms/image/D4D03AQGm3jYZz_WRrQ/profile-displayphoto-shrink_200_200/0/1679491532531?e=1685577600&v=beta&t=-eZCFMA0OzmHrG4AHvX0ZVuIc5M1QLeLNSiTDPHHX6U"
                             alt="Adam Sioud"
-                            boxSize="150px"
+                            boxSize="130px"
                             objectFit="cover"
                         />
                     </Circle>
                 </Box>
-                <Box display="flex" alignItems="center" justifyContent="center" spacing={4}>
+                <Box display="flex" spacing={4}>
                     <HStack spacing={4}>
                         <Link href="https://github.com/AdamSioud" isExternal>
                             <FaGithub size="24px" />
@@ -36,8 +36,8 @@ const About = () => {
                         {/* Add more social icons here */}
                     </HStack>
                 </Box>
-                <Box w="50%" display="flex" flexDirection="column" alignItems="center" justifyContent="center" spacing={4}>
-                    <Heading as="h2" fontSize="2xl" mb={4}>
+                <Box w="50%" display="flex" flexDirection="column" justifyContent="center" spacing={4}>
+                    <Heading as="h2" fontSize="2xl" mb={4} mt={3}>
                         Om meg
                     </Heading>
                     <Text fontSize="lg">

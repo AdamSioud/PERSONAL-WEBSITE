@@ -6,14 +6,13 @@ const Interests = () => {
     return (
         <Box>
             <Heading as="h2" fontSize="2xl" mb={4}>
-                Interests
+                Intereesser
             </Heading>
             <VStack spacing={4} alignItems="flex-start">
-                <Text>Some of my interests include:</Text>
-                <Text>- Reading books on various topics, such as science and history</Text>
-                <Text>- Watching movies and TV shows</Text>
-                <Text>- Traveling to new places and experiencing different cultures</Text>
-                <Text>- Playing video games and board games with friends and family</Text>
+                <Text>Interesse seksjonen må bygges på</Text>
+                <Text>Finans har jeg lenge hatt et øye for</Text>
+                <Text>Kunst, gå innom galleriene og museumene en by byr på</Text>
+                <Text>Lage kunst selv, skulpturer ved hjelp av gips</Text>
             </VStack>
         </Box>
     );
