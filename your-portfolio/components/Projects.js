@@ -33,7 +33,7 @@ const projects = [
     {
         title: 'Trondheim Kart',
         description: 'Som en del av et gruppeprosjekt ved NTNU, ga Trondheim kommune meg og en gruppe studenter i oppdrag å lage en prototype som kan finne det beste stedet å bo i Trondheim basert på visse kriterier',
-        href: 'https://github.com/AdamSioud/Trondheim-Kommune-Prosjekt-Frontend',
+        href: 'https://www.canva.com/design/DAFSGZOpYkk/1genLmDENc6ZO5EK08Mq4Q/view?utm_content=DAFSGZOpYkk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',
     },
     {
         title: 'MINTA IOS APP',
