@@ -1,6 +1,8 @@
 import { Image, SimpleGrid, VStack, Circle, Link, HStack, Box, Flex, Grid, Heading, Text } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
+
+
 const ProjectCard = ({ title, description, href }) => (
     <VStack
         borderWidth={1}
@@ -18,6 +20,10 @@ const ProjectCard = ({ title, description, href }) => (
         </Link>
     </VStack>
 );
+
+
+
+
 
 const projects = [
     {
