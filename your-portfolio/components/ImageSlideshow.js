@@ -1,5 +1,4 @@
 // components/ImageSlideshow.js
-
 import { Box, Image, Button, Flex } from '@chakra-ui/react';
 import { useState } from 'react';
 
@@ -16,7 +15,7 @@ const ImageSlideshow = ({ images }) => {
 
     return (
         <Box>
-            <Box position="relative" width="70%" height="50%" mx="auto">
+            <Box position="relative" width="100%" height="500px" mx="auto">
                 <Image
                     src={images[currentIndex]}
                     alt="Artwork"

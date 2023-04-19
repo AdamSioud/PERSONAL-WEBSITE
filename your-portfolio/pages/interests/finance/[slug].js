@@ -4,17 +4,13 @@ import { Box, Heading, Text } from "@chakra-ui/react";
 
 const blogPosts = [
     {
-        title: "Understanding Cryptocurrencies",
-        description: "An introduction to the world of cryptocurrencies and their impact on the global economy.",
-        slug: "understanding-cryptocurrencies",
-        content: "Your blog post content goes here...",
+        title: "Understanding Correlation, Causality, and Biases",
+        description: "When making investment decisions, understanding the relationship between different variables is crucial. However, it's important to distinguish between correlation and causality and to identify and account for potential biases in data analysis. This article will explore how correlation and causality play a role in investment analysis, and how biases can impact the interpretation of results. It will also provide practical tips for minimizing these biases and making more informed investment decisions. Whether you are a novice or experienced investor, this article will provide valuable insights into the nuances of financial data analysis.",
+        slug: "understanding-correlation-causality-biases",
+        content: "When making investment decisions, understanding the relationship between different variables is crucial. However, it's important to distinguish between correlation and causality and to identify and account for potential biases in data analysis. This article will explore how correlation and causality play a role in investment analysis, and how biases can impact the interpretation of results. It will also provide practical tips for minimizing these biases and making more informed investment decisions. Whether you are a novice or experienced investor, this article will provide valuable insights into the nuances of financial data analysis.",
+
     },
-    {
-        title: "Understanding Biases",
-        description: "An introduction to the world of cryptocurrencies and their impact on the global economy.",
-        slug: "understanding-biases",
-        content: "Your blog post content goes here...",
-    },
+
     // Add more blog posts here
 ];
 

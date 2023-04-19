@@ -1,10 +1,10 @@
+// pages/art/index.js
 import {
     Box,
     Heading,
-    SimpleGrid,
     ChakraProvider,
     Flex,
-    Button,
+    Link as ChakraLink,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { extendTheme } from "@chakra-ui/react";
@@ -40,15 +40,21 @@ const Art = () => {
                 <Box maxW="1500px" p={["6"]} mx="auto" my="10" width="100%">
                     <Flex direction="column" alignItems="center" spacing={4}>
                         <Heading as="h2" fontSize="2xl">
-                            Skulpturkunst
+                            Adams skulpturer
                         </Heading>
-                        <SimpleGrid minChildWidth="300px" spacing="10" minH="full">
-                            <ImageSlideshow images={artImages} />
-                        </SimpleGrid>
+                        <ImageSlideshow images={artImages} />
                         <Link href="/" passHref>
-                            <Button as="a" mt={4}>
-                                Return to Index
-                            </Button>
+                            <ChakraLink
+                                as="button"
+                                mt={4}
+                                px={4}
+                                py={2}
+
+                                borderRadius="md"
+
+                            >
+                                Hjem
+                            </ChakraLink>
                         </Link>
                     </Flex>
                 </Box>
